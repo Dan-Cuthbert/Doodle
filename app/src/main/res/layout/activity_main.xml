@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mydoodle.MainActivity">
+
+    <com.example.mydoodle.DoodleView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textRed"
+        android:id="@+id/doodle_view" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="C"
+        android:id="@+id/clear_button"
+        android:background="@drawable/square_button"
+        android:onClick="onButtonClick"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:minWidth="45dp"
+        android:minHeight="45dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="R"
+        android:id="@+id/textRed"
+        android:layout_above="@+id/clear_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="G"
+        android:id="@+id/textGreen"
+        android:layout_above="@+id/textBlue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="B"
+        android:id="@+id/textBlue"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarRed"
+        android:max="255"
+        android:progress="0"
+        android:indeterminate="false"
+        android:minWidth="65dp"
+        android:layout_alignBottom="@+id/textRed"
+        android:layout_toRightOf="@+id/textGreen"
+        android:layout_toEndOf="@+id/textGreen" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarGreen"
+        android:max="255"
+        android:progress="0"
+        android:indeterminate="false"
+        android:minWidth="65dp"
+        android:layout_alignBottom="@+id/textGreen"
+        android:layout_toRightOf="@+id/textGreen"
+        android:layout_toEndOf="@+id/textGreen" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarBlue"
+        android:layout_alignBottom="@+id/textBlue"
+        android:layout_toRightOf="@+id/textGreen"
+        android:layout_toEndOf="@+id/textGreen"
+        android:indeterminate="false"
+        android:max="255"
+        android:progress="0"
+        android:minWidth="65dp" />
+
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/radioBrushSizes"
+        android:layout_alignTop="@+id/seekBarRed"
+        android:layout_toRightOf="@+id/seekBarGreen"
+        android:layout_toEndOf="@+id/seekBarGreen">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:id="@+id/radioButtonSmall"
+            android:checked="true"
+            android:onClick="smallBrush"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:id="@+id/radioButtonMed"
+            android:onClick="mediumBrush"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:id="@+id/radioButtonLarge"
+            android:onClick="largeBrush"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Opacity"
+        android:id="@+id/textOpac"
+        android:layout_above="@+id/clear_button"
+        android:layout_toRightOf="@id/radioBrushSizes"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="5dp"
+        android:textColor="#000000"
+        android:textSize="16dp" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBarOpac"
+        android:max="255"
+        android:progress="255"
+        android:indeterminate="false"
+        android:minWidth="65dp"
+        android:layout_alignBottom="@+id/textOpac"
+        android:layout_toRightOf="@+id/textOpac"
+        android:layout_toEndOf="@+id/textOpac" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?\?\?"
+        android:id="@+id/totalRandGrad"
+        android:background="@drawable/round_button"
+        android:onClick="totalRandGradient"
+        android:layout_alignBottom="@id/clear_button"
+        android:layout_toLeftOf="@+id/clear_button"
+        android:layout_marginRight="5dp"
+        android:minWidth="40dp"
+        android:minHeight="40dp"
+        android:layout_marginBottom="2dp"
+        android:textSize="20dp"
+        android:textColor="#ffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="\?"
+        android:id="@+id/randGradient"
+        android:background="@drawable/round_button"
+        android:onClick="singleRandGradient"
+        android:layout_alignBottom="@id/clear_button"
+        android:layout_toLeftOf="@+id/totalRandGrad"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:minHeight="40dp"
+        android:minWidth="40dp"
+        android:layout_marginBottom="2dp"
+        android:textColor="#ffffff"
+        android:textSize="20dp" />
+
+</RelativeLayout>
