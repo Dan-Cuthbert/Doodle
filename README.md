@@ -1,4 +1,4 @@
-#README.md
+#Project Description
 
 This repo includes code for an interactive sketching application made in Android Studio. This sketching applications contains
 features such as a color picker via the associated seekbars, three brush sizes accessible via the radio buttons, as well as a 
@@ -8,7 +8,7 @@ There are two distinct buttons which do this. The single question mark generates
 repeatedly as you draw. The triple question mark generates you a random three color gradient that will change every time the user 
 draws a new path on the canvas (lifts their finger off the screen).
 
-Resources consulted in making this application: 
+#Resources used:
 https://developer.android.com/reference/android/graphics/Paint.html
 https://developer.android.com/reference/android/graphics/Path.html
 https://developer.android.com/reference/android/graphics/Buttons.html
