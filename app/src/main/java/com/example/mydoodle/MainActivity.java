@@ -117,10 +117,10 @@ public class MainActivity extends AppCompatActivity {
         dv.setBrushSize(10);
     }
     public void mediumBrush(View view){
-        dv.setBrushSize(20);
+        dv.setBrushSize(30);
     }
     public void largeBrush(View view){
-        dv.setBrushSize(30);
+        dv.setBrushSize(60);
     }
 
     /*Setting Gradient*/
