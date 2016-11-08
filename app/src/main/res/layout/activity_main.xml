@@ -142,7 +142,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Opacity"
+        android:text="Opac"
         android:id="@+id/textOpac"
         android:layout_above="@+id/clear_button"
         android:layout_toRightOf="@id/radioBrushSizes"
