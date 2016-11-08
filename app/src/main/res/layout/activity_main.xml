@@ -20,13 +20,11 @@
         android:layout_height="wrap_content"
         android:text="C"
         android:id="@+id/clear_button"
-        android:background="@drawable/square_button"
         android:onClick="onButtonClick"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:minWidth="45dp"
-        android:minHeight="45dp"
-        android:textColor="#ffffff"
+        android:minWidth="50dp"
+        android:minHeight="50dp"
         android:textSize="20dp" />
 
     <TextView
@@ -142,7 +140,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Opac"
+        android:text="Opacity"
         android:id="@+id/textOpac"
         android:layout_above="@+id/clear_button"
         android:layout_toRightOf="@id/radioBrushSizes"
@@ -173,10 +171,10 @@
         android:onClick="totalRandGradient"
         android:layout_alignBottom="@id/clear_button"
         android:layout_toLeftOf="@+id/clear_button"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="2dp"
         android:minWidth="40dp"
         android:minHeight="40dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="5dp"
         android:textSize="20dp"
         android:textColor="#ffffff" />
 
@@ -191,10 +189,10 @@
         android:layout_alignBottom="@id/clear_button"
         android:layout_toLeftOf="@+id/totalRandGrad"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_marginRight="3dp"
         android:minHeight="40dp"
         android:minWidth="40dp"
-        android:layout_marginBottom="2dp"
+        android:layout_marginBottom="5dp"
         android:textColor="#ffffff"
         android:textSize="20dp" />
 
