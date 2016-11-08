@@ -1,20 +1,9 @@
 package com.example.mydoodle;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -118,12 +107,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    /*Clear functionality*/
     public void onButtonClick(View view) {
-        /*Clear functionality*/
-        Toast.makeText(getApplicationContext(), "Clear Button Clicked" + ((Button)view).getText(), Toast.LENGTH_SHORT);
         dv.reset();
     }
 
+    /*Setting Brush Sizes*/
     public void smallBrush(View view){
         dv.setBrushSize(10);
     }
@@ -134,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
         dv.setBrushSize(30);
     }
 
+    /*Setting Gradient*/
     public void singleRandGradient(View view) {
         dv.setGradient(1);
     }
@@ -141,35 +131,4 @@ public class MainActivity extends AppCompatActivity {
         dv.setGradient(2);
     }
 
-    /*public void open(View view){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-
-        alertDialogBuilder.setMessage("Are you sure, You wanted to make decision");
-        alertDialogBuilder.setPositiveButton("yes", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface arg0, int arg1) {
-                Toast.makeText(MainActivity.this,"You clicked yes button",Toast.LENGTH_LONG).show();
-            }
-        });
-        alertDialogBuilder.setNegativeButton("No",new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                finish();
-            }
-        });
-        alertDialogBuilder.setTitle("AlertDialog");
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-    }*/
-
-
-    /*<Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Alert dialog"
-    android:id="@+id/button"
-    android:onClick="open"
-    android:layout_below="@+id/seekBarRed"
-    android:layout_alignParentRight="true"
-    android:layout_alignParentEnd="true" />*/
 }
